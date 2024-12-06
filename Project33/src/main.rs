@@ -9,4 +9,3 @@ fn main() {
 
     println!("{:?}", arr); // Outputs: [1, 20, 30, 4, 5]
 }
-``
