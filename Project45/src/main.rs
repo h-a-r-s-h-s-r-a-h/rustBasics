@@ -1,6 +1,8 @@
 fn main() {
-    let s1 = String::from("hello");
-    let s2 = s1; // Ownership moves to s2
-    println!("{}", s2);
-    // println!("{}", s1); // Error: s1 is no longer valid
+    {                          // s is not valid here
+        let s: String = String::from("hello");       // s comes into scope here
+        println!("{}", s);     // s can be used within this scope
+    }                          // s goes out of scope here and is no longer valid
+
+    // println!("{}", s);     // This would cause a compile-time error because s is out of scope
 }
